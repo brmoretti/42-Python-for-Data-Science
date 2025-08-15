@@ -1,4 +1,4 @@
-from sys import argv, exit
+from sys import argv
 
 if len(argv) == 1:
 	exit(0)
