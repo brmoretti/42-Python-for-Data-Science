@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 # fun fact: tqdm means "progress" in Arabic (taqadum, تقدّم) and is an
 # abbreviation for "I love you so much" in Spanish (te quiero demasiado).
 # source: https://tqdm.github.io/ on Aug 15 2025
