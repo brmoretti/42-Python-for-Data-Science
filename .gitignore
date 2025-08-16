@@ -1,5 +1,4 @@
 *.pdf
 __pycache__
-tester.py
 .vscode
-venv
+.venv
