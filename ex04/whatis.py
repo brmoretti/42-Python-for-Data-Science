@@ -1,3 +1,5 @@
+#!/usr/bin/env python3.10
+
 from sys import argv
 
 if len(argv) == 1:
@@ -10,7 +12,7 @@ try:
         number = int(argv[1])
     except ValueError:
         raise AssertionError("argument is not an integer")
-    print("I'm " + ("Odd" if number % 2 else "Even") + ".")
+    print(f"I'm {'Odd' if number % 2 else 'Even'}.")
 except AssertionError as e:
     print(f"AssertionError: {e}")
     exit(1)
