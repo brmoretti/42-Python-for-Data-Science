@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.10
 
 from sys import argv, stdin
 
@@ -73,7 +73,7 @@ def countDigits(string: str) -> int:
     return sum(1 for c in string if c.isdigit())
 
 
-def printSummary(string: str):
+def printSummary(string: str) -> None:
     """
     Prints a summary of character counts in the given string.
 
@@ -91,14 +91,12 @@ def printSummary(string: str):
     Returns:
         None
     """
-    print(
-        f"The text contains {len(string)} characters:\n"
-        f"{countUpperLetters(string)} upper letters\n"
-        f"{countLowerLetters(string)} lower letters\n"
-        f"{countPunctuation(string)} punctuation marks\n"
-        f"{countSpaces(string)} spaces\n"
-        f"{countDigits(string)} digits"
-        )
+    print(f"""The text contains {len(string)} characters:
+    {countUpperLetters(string)} upper letters
+    {countLowerLetters(string)} lower letters
+    {countPunctuation(string)} punctuation marks
+    {countSpaces(string)} spaces
+    {countDigits(string)} digits""")
 
 
 def main():
