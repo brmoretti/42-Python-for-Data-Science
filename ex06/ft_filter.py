@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 def ft_filter(function, iterable):
     """
     ft_filter(function or None, iterable) --> filter object
