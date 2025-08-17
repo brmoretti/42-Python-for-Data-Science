@@ -1,3 +1,5 @@
+#!/usr/bin/env python3.10
+
 from NULL_not_found import NULL_not_found
 
 Nothing = None
