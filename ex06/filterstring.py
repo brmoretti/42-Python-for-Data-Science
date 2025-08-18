@@ -22,13 +22,13 @@ def main():
     is greater than the integer argument.
 
     - Expects exactly two arguments: a string of words and an integer.
-    - Splits the first argument into words and filters out those with length
-    less than or equal to the integer.
     - Raises an AssertionError if:
         - The number of arguments is not exactly two.
         - The second argument cannot be converted to an integer.
         - Any word contains special characters (as determined by
         containsSpecialCharacters).
+    - Splits the first argument into words and filters out those with length
+    less than or equal to the integer.
     - Prints the filtered list of words.
     - Prints an AssertionError message if arguments are missing or invalid.
     """
@@ -37,11 +37,11 @@ def main():
             raise AssertionError("the arguments are bad")
         try:
             n = int(argv[2])
-            words = argv[1].split()
-            for s in words:
+            for s in argv[1]:
                 if containsSpecialCharacters(s):
                     raise AssertionError("the argument contains"
                                          " a special character")
+            words = argv[1].split()
             print(list(ft_filter(lambda s: len(s) > n, words)))
         except ValueError:
             raise AssertionError("the arguments are bad")
