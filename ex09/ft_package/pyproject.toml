@@ -14,4 +14,4 @@ license = "MIT"
 license-files = ["LICENCE"]
 
 [project.urls]
-Homepage = "https://github.com/brmoretti/ft_package"
+Homepage = "https://github.com/brmoretti/Python-0-Starting/tree/master/ex09/ft_package"
