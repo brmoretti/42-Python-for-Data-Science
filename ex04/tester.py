@@ -17,7 +17,8 @@ passed = 0
 for i, (args, expected_out, expected_code) in enumerate(test_cases, 1):
     print(f"\033[1m\nTest {i}:\033[0m")
     print(f"  Args:            {args}")
-    result = subprocess.run([PYTHON, SCRIPT, *args], capture_output=True, text=True)
+    result = subprocess.run([PYTHON, SCRIPT, *args],
+                            capture_output=True, text=True)
     out = result.stdout
     err = result.stderr
     code = result.returncode
