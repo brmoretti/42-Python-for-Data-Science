@@ -33,17 +33,3 @@
 	pip uninstall ft_package
 	```
 	This will uninstall `ft_package` from your Python environment.
----
-
-**Note:**
-Make sure you have the required build tools installed. If not, you can install them with:
-```
-pip install build
-```
-
-[build-system]
-requires = ["hatchling >= 1.26"]
-build-backend = "hatchling.build"
-
-[tool.hatch.build.targets.wheel]
-packages = ["ft_package"]
