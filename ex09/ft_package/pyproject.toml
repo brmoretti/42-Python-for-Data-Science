@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ft_package"
+version = "0.0.1"
+authors = [{ name = "Bruno Moretti", email = "bmoretti@student.42sp.org.br" }]
+description = "A sample test package"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = []
+license = "MIT"
+license-files = ["LICENCE"]
+
+[project.urls]
+Homepage = "https://github.com/brmoretti/ft_package"
