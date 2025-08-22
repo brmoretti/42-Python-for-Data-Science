@@ -1,5 +1,4 @@
-
-from PIL import Image
+from PIL import Image, UnidentifiedImageError
 import numpy as np
 
 
@@ -15,22 +14,18 @@ def ft_load(path: str) -> np.ndarray:
         np.ndarray: The image represented as a NumPy array. If loading fails,
         returns an empty array.
 
-    Side Effects:
-        Prints the shape of the loaded image if successful.
-        Prints error messages if loading fails.
-
     Raises:
-        Exception: For any errors encountered during loading. Note that
-        AssertionError is handled internally and not raised to the caller.
+        Prints an error message if the file is not found, the image cannot be
+        identified, the file is not a valid image, or the loaded array is
+        empty.
     """
     try:
         with Image.open(path) as im:
             arr = np.array(im)
-            assert arr.size > 0, f"failed to load {path}"
-            print(f"The shape of image is: {arr.shape}")
+        assert arr.size > 0, f"loaded from {path} array is empty"
+        print(f"The shape of image is: {arr.shape}")
         return arr
-    except AssertionError as e:
-        print(f"AssertionError: {e}")
-    except Exception as e:
-        print(f"{type(e).__name__} : {e}")
+    except (FileNotFoundError, UnidentifiedImageError, ValueError,
+            PermissionError, AssertionError) as e:
+        print(f"{type(e).__name__}: {e}")
     return np.array([])
