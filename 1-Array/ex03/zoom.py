@@ -4,6 +4,12 @@ from PIL import Image, UnidentifiedImageError
 import os
 
 
+def print_first_and_last(arr: np.ndarray):
+    print(f"[{arr[0][0:3]}")
+    print("...")
+    print(f"{arr[-1][0:3]}]")
+
+
 def main():
     """
     Main function to load an image, crop a specific region, extract its first
@@ -24,9 +30,8 @@ def main():
     """
     img_path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                             "animal.jpeg")
-    np.set_printoptions(threshold=6, edgeitems=3)
     arr = ft_load(img_path)
-    print(arr) if arr.size != 0 else exit(1)
+    print_first_and_last(arr) if arr.size != 0 else exit(1)
 
     (left, upper) = (450, 100)
     (right, lower) = (left + 400, upper + 400)
@@ -39,7 +44,7 @@ def main():
             assert arr.size > 0, "image array is empty"
             arr = arr[:, :, np.newaxis]
             print(f"New shape after slicing: {arr.shape} or {arr.shape[0:-1]}")
-            print(arr)
+            print_first_and_last(arr)
             im.show()
     except (FileNotFoundError, UnidentifiedImageError, ValueError,
             PermissionError, AssertionError) as e:
