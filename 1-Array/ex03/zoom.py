@@ -22,6 +22,26 @@ def print_first_and_last(arr: np.ndarray):
     print(f"{arr[-1][0:3]}]")
 
 
+def crop_squared(im: Image.Image, top_left_corner: tuple[float, float],
+                 side_px: float) -> Image.Image:
+    """
+    Crops a square region from the given image starting at the specified
+    top-left corner.
+
+    Args:
+        im (Image.Image): The input image to crop.
+        top_left_corner (tuple[float, float]): The (left, upper) coordinates
+        of the top-left corner of the square crop.
+        side_px (float): The length of the sides of the square crop in pixels.
+
+    Returns:
+        Image.Image: The cropped square region as a new image.
+    """
+    (left, upper) = top_left_corner
+    (right, lower) = (left + side_px, upper + side_px)
+    return im.crop((left, upper, right, lower))
+
+
 def main():
     """
     Main function to load an image, crop a specific region, extract its first
@@ -45,12 +65,9 @@ def main():
     arr = ft_load(img_path)
     print_first_and_last(arr) if arr.size != 0 else exit(1)
 
-    (left, upper) = (450, 100)
-    (right, lower) = (left + 400, upper + 400)
-
     try:
         with Image.open(img_path) as im:
-            im = im.crop((left, upper, right, lower))
+            im = crop_squared(im, (450, 100), 400)
             im = im.getchannel(0)
             arr = np.array(im)
             assert arr.size > 0, "image array is empty"
