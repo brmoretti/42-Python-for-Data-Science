@@ -5,6 +5,18 @@ import os
 
 
 def print_first_and_last(arr: np.ndarray):
+    """
+    Prints the first three elements of the first and last rows of a NumPy
+    array.
+
+    Parameters:
+        arr (np.ndarray): A 2D NumPy array.
+
+    Output:
+        Prints the first three elements of the first row, an ellipsis, and the
+        first three elements of the last row,
+        formatted to indicate the start and end of the array.
+    """
     print(f"[{arr[0][0:3]}")
     print("...")
     print(f"{arr[-1][0:3]}]")
