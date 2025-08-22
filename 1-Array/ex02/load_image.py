@@ -22,7 +22,7 @@ def ft_load(path: str) -> np.ndarray:
     try:
         with Image.open(path) as im:
             arr = np.array(im)
-        assert arr.size > 0, f"loaded from {path} array is empty"
+        assert arr.size > 0, f"image {path} array is empty"
         print(f"The shape of image is: {arr.shape}")
         return arr
     except (FileNotFoundError, UnidentifiedImageError, ValueError,
