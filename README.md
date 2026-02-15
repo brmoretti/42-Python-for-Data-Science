@@ -26,12 +26,9 @@ This project uses [uv](https://github.com/astral-sh/uv) for fast Python environm
 - [uv](https://github.com/astral-sh/uv) installed (`pip install uv` or see uv documentation)
 
 ### Setting up the environment
-
 1. **Install dependencies:**
    ```zsh
-   uv pip install -r requirements.txt
-   # or, if using pyproject.toml:
-   uv pip install
+   uv sync
    ```
    This will create a `.venv` directory and install all dependencies.
 

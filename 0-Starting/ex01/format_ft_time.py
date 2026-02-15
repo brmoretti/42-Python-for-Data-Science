@@ -1,5 +1,3 @@
-#!/usr/bin/env python3.10
-
 from datetime import datetime
 
 dt_init = datetime(1970, 1, 1)

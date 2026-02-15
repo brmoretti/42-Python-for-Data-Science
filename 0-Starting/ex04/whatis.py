@@ -1,5 +1,3 @@
-#!/usr/bin/env python3.10
-
 from sys import argv
 
 if len(argv) == 1:
