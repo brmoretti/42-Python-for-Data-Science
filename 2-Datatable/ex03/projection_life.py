@@ -1,10 +1,10 @@
 import matplotlib
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotlib.ticker as mticker
 import pandas as pd
 from load_csv import load
+matplotlib.use("Agg")
 
 
 def thousands_formatter(x, pos):

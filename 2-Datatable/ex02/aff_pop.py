@@ -1,9 +1,9 @@
 import matplotlib
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotlib.ticker as mticker
 from load_csv import load
+matplotlib.use("Agg")
 
 
 def parse_population(val):
