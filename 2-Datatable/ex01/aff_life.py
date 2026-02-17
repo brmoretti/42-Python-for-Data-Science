@@ -1,8 +1,8 @@
 import matplotlib
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import seaborn as sns
 from load_csv import load
+matplotlib.use("Agg")
 
 
 def main():
@@ -29,6 +29,7 @@ def main():
     plt.tight_layout()
     plt.savefig("life_expectancy_brazil.png")
     plt.close()
+
 
 if __name__ == "__main__":
     main()
