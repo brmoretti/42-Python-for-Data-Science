@@ -2,19 +2,7 @@ from S1E9 import Character
 
 
 class Baratheon(Character):
-    """
-    Baratheon class representing a character from the Baratheon family.
-
-    Inherits from Character class and adds specific attributes for Baratheon
-    family members.
-
-    Attributes:
-        first_name (str): The character's first name.
-        is_alive (bool): Whether the character is alive. Defaults to True.
-        family_name (str): The family name, set to "Baratheon".
-        eyes (str): Eye color, set to "brown".
-        hairs (str): Hair color, set to "dark".
-    """
+    """Representing the Baratheon family."""
     def __init__(self, first_name: str, is_alive: bool = True) -> None:
         """
         Initialize a Baratheon instance.
@@ -34,28 +22,38 @@ class Baratheon(Character):
         self.eyes = "brown"
         self.hairs = "dark"
 
+    def __str__(self):
+        """
+        Return a string representation of the Baratheon character.
+
+        This method delegates to the parent class's __str__ implementation
+        to provide a consistent string representation across the class
+        hierarchy.
+
+        Returns:
+            str: A string representation of the character, inherited from the
+            parent class.
+        """
+        return super().__str__()
+
+    def __repr__(self):
+        """
+        Return a string representation of the object.
+
+        This method is called by the repr() built-in function and by string
+        conversions (reverse quotes) to compute the official string
+        representation of an object. The returned string should be a valid
+        Python expression that could be used to recreate an object with the
+        same value.
+
+        Returns:
+            str: A string representation of the object.
+        """
+        return super().__repr__()
+
 
 class Lannister(Character):
-    """
-    Lannister character class representing members of House Lannister.
-
-    This class inherits from Character and defines specific attributes
-    for Lannister family members, including their distinctive physical traits.
-
-    Attributes:
-        first_name (str): The character's first name.
-        is_alive (bool): Whether the character is alive. Defaults to True.
-        family_name (str): The family name, set to "Lannister".
-        eyes (str): Eye color, set to "blue".
-        hairs (str): Hair color, set to "light".
-
-    Methods:
-        __init__(first_name, is_alive): Initializes a Lannister instance with
-            the given first name and alive status, setting family-specific
-            attributes.
-        create_lannister(first_name, is_alive): Class method that creates and
-            returns a new Lannister instance.
-    """
+    """Representing the Lannister family."""
     def __init__(self, first_name: str, is_alive: bool = True) -> None:
         """
         Initialize a Lannister character.
@@ -72,6 +70,35 @@ class Lannister(Character):
         self.family_name = "Lannister"
         self.eyes = "blue"
         self.hairs = "light"
+
+    def __str__(self):
+        """
+        Return a string representation of the Baratheon character.
+
+        This method delegates to the parent class's __str__ implementation
+        to provide a consistent string representation across the class
+        hierarchy.
+
+        Returns:
+            str: A string representation of the character, inherited from the
+            parent class.
+        """
+        return super().__str__()
+
+    def __repr__(self):
+        """
+        Return a string representation of the object.
+
+        This method is called by the repr() built-in function and by string
+        conversions (reverse quotes) to compute the official string
+        representation of an object. The returned string should be a valid
+        Python expression that could be used to recreate an object with the
+        same value.
+
+        Returns:
+            str: A string representation of the object.
+        """
+        return super().__repr__()
 
     @classmethod
     def create_lannister(
