@@ -47,7 +47,6 @@ def outer(x: int | float, function) -> object:
 
     def inner() -> float:
         nonlocal count
-        nonlocal x
         count += 1
         result = x
         for _ in range(count):
