@@ -66,9 +66,9 @@ This project uses [uv](https://github.com/astral-sh/uv) for fast Python environm
    ```
 
 3. **(Optional) Add aliases for tools:**
-   For example, to alias `norminette` to `flake8`:
+   For example, to alias `norminette` to `flake8`, inside the project's directory:
    ```zsh
-   alias norminette='.venv/bin/flake8'
+   alias norminette="$PWD/.venv/bin/flake8"
    ```
    Add this line to your `~/.zshrc` for persistence.
 
